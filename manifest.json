@@ -1,0 +1,23 @@
+{
+  "id": "com.votre-nom.assistant-ai",
+  "name": "Assistant AI Personnalisé",
+  "short_name": "Assistant AI",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Assistant AI avec génération de texte, image et logo.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
