@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Assistant AI</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">Mon AI App</div>
+        <div class="toggle-container">
+            <span class="mode-label">SFW</span>
+            <label class="switch">
+                <input type="checkbox" id="nsfw-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="mode-label" style="color: red;">NSFW</span>
+        </div>
+    </header>
+
+    <div id="age-verification" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Vérification d'âge requise</h3>
+            <p>Connectez-vous avec Google et répondez au questionnaire pour accéder à ces modèles.</p>
+            <button class="btn-google">Connexion Google</button>
+            <button class="btn-cancel" onclick="cancelNSFW()">Annuler</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="zone zone-chat">
+            <h2>Chatbot de discussion</h2>
+            <p>Personnalisez le caractère et le rôle de votre AI.</p>
+            <select class="input-field">
+                <option>Spécifier la personnalité (Tendre, Colérique...)</option>
+                <option>Générateur de textes scolaires</option>
+                <option>SpicyChat (Nécessite connexion)</option>
+            </select>
+            <div class="action-buttons">
+                <button class="btn blue">Vocal 🎤</button>
+                <button class="btn green">Uploader PDF/Word 📎</button>
+            </div>
+        </section>
+
+        <section class="zone zone-image">
+            <h2>Générateur d'Image</h2>
+            <p>Saisissez votre prompt. Assistant AI inclus.</p>
+            <textarea class="input-field" placeholder="Décrivez l'image que vous souhaitez..."></textarea>
+            <select class="input-field">
+                <option>AI Gratuite par défaut</option>
+                <option>PixAI - Modèle 1 (18615...)</option>
+                <option>PixAI - Modèle 2 (19612...)</option>
+            </select>
+            <div class="action-buttons">
+                <button class="btn purple">Assistant Prompt ✨</button>
+                <button class="btn red">Uploader Image de base 🖼️</button>
+            </div>
+        </section>
+
+        <section class="zone zone-logo">
+            <h2>Générateur de Logo</h2>
+            <p>Créez l'identité visuelle parfaite.</p>
+            <textarea class="input-field" placeholder="Ex: Un logo pour un restaurant moderne..."></textarea>
+            <div class="action-buttons">
+                <button class="btn purple">Assistant Logo ✨</button>
+                <button class="btn blue">Générer & Enregistrer 💾</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
